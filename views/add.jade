@@ -19,7 +19,7 @@ html
               strong Update Speech
     br
     div
-      form(type='post', action='/students')
+      form(type='post', action='/add')
         .columns
           .column.is-2
             p
@@ -120,7 +120,6 @@ html
                     img(src='../images/aguinaldo.jpg')
                 span Aguinaldo
           .column.is-3.notification
-            form(method="POST", action="/save")
               label.label.is-red Fill up this form to add new speech
               br
               label.label Title
@@ -130,10 +129,6 @@ html
               p.control
                 input.input(type='text', placeholder='Name of speaker', name='speaker', list='speakers')
                 datalist#speakers
-                  option Volvo
-                  option Saab
-                  option Mercedes
-                  option Audi
               label.label Date Delivered
               p.control
                 input.input(type='text', placeholder='Date', name='date_delivered')
