@@ -12,10 +12,10 @@ var update = require('./routes/update');
 
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectId;
-var assert = require('assert');s
-
+var assert = require('assert');
 var url = 'mongodb://sheila1996:sheila1996@ds111559.mlab.com:11559/speech';
 var app = express();
+
 
  // view engine setup
  app.set('views', path.join(__dirname, 'views'));
