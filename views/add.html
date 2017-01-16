@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bulma.css">
+<title></title>
+</head>
+<body style="background-attachment:fixed" background="fbg.jpg">
+	<nav class="nav has-shadow is-black">
+	  <div class="container">
+	    <div class="nav-left">
+	      <a class="nav-item">
+	        <img src="Team 3 Logo.jpg">
+		      <a class="nav-item is-tab" href="index.html"><strong>Home</strong></a>
+		      <a class="nav-item is-tab" href="view.html"><strong>View Speech</strong></a>
+		      <a class="nav-item is-tab is-active" href="add.html"><strong>Add Speech</strong></a>
+		      <a class="nav-item is-tab" href="update.html"><strong>Updated Speech</strong></a>
+	      </a>
+	     </div>
+	  </div>
+	</nav><br>
+	<div>
+	  <form type="post" action="/students">
+		<div class="columns">
+		 <div class="column is-2">
+
+		 	<p><br>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="duterte.jpg"></img></i>
+			    </span>
+			    <span>Duterte</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="naquino.jpg"></img></i>
+			    </span>
+			    <span>B. Aquino</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="macapagal.jpg"></img></i>
+			    </span>
+			    <span>Macapagal</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="estrada.jpg"></img></i>
+			    </span>
+			    <span>Estrada</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="ramos.jpg"></img></i>
+			    </span>
+			    <span>Ramos</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="caquino.jpg"></img></i>
+			    </span>
+			    <span>Aquino</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="marcos.jpg"></img></i>
+			    </span>
+			    <span>Marcos</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="diosdado.jpg"></img></i>
+			    </span>
+			    <span>Diosdado</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="garcia.jpg"></img></i>
+			    </span>
+			    <span>Garcia</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="magsaysay.jpg"></img></i>
+			    </span>
+			    <span>Magsaysay</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="quirino.jpg"></img></i>
+			    </span>
+			    <span>Quirino</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="roxas.jpg"></img></i>
+			    </span>
+			    <span>Roxas</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="laurel.jpg"></img></i>
+			    </span>
+			    <span>Laurel</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="osmena.jpg"></img></i>
+			    </span>
+			    <span>Osmena</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="quezon.jpg"></img></i>
+			    </span>
+			    <span>Quezon</span>
+			  </a>
+			</p>
+		 	<p>
+			  <a class="button is-large black">
+			    <span class="icon is-medium">
+			      <i><img src="aguinaldo.jpg"></img></i>
+			    </span>
+			    <span>Aguinaldo</span>
+			  </a>
+			</p>
+
+		 </div>
+		 <div class="column is-3 notification">
+		  <label class="label is-red">Fill up this form to add new speech</label><br>
+		  <label class="label">Title</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Speech title" name="title">
+		   </p>
+		  <label class="label">Speaker</label>
+		   <p class="control">
+		    <input class="input" type="text" placeholder="Name of speaker" name="speaker" list="speakers">
+			<datalist id="speakers">
+			  <option>Volvo</option>
+			  <option>Saab</option>
+			  <option>Mercedes</option>
+			  <option>Audi</option>
+			</datalist>
+		   </p>
+		  <label class="label">Date Delivered</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Date" name="date_delivered">
+		   </p>
+		  <label class="label">Location</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Location" name="locations">
+		   </p>
+		  <label class="label">Body</label>
+		    <p class="control">
+		      <textarea class="textarea" placeholder="" name="body"></textarea>
+		    </p>
+		  <label class="label">Permalink</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="www." name="permalink">
+		   </p>
+		  <label class="label">Date Created</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Creation date of entry" name="create_date">
+		   </p>
+		  <label class="label">Date Updated</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Update date of entry" name="update_date">
+		   </p><br><br><br><br>
+		  <div class="control is-grouped">
+		    <p class="control">
+		      <button class="button is-primary">Create</button>
+		    </p>
+		    <p class="control">
+		      <button class="button is-primary">Cancel</button>
+		    </p>
+		  </div>
+		 </div>
+		</div>
+	  </form>
+	</div><br><br><br>
+
+	<footer class="footer">
+	  <div class="container">
+	    <div class="content has-text-centered">
+	      <p>
+	        <strong>Philippine President Speeches</strong> by Jayvee Asuncion and Sheila Siongco.</p>
+	        <p>The source code is licensed
+	        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+	        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+	      </p>
+	      <p>
+	        <span class="icon">
+	          <img src="github-256.png">
+	        </span>
+	      </p>
+	    </div>
+	  </div>
+	</footer>
+</body>

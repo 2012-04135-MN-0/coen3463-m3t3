@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bulma.css">
+<title></title>
+</head>
+<body style="background-attachment:fixed" background="fbg.jpg">
+	<nav class="nav has-shadow is-black">
+	  <div class="container">
+	    <div class="nav-left">
+	      <a class="nav-item">
+	        <img src="Team 3 Logo.jpg">
+		      <a class="nav-item is-tab" href="index.html"><strong>Home</strong></a>
+		      <a class="nav-item is-tab" href="view.html"><strong>View Speech</strong></a>
+		      <a class="nav-item is-tab" href="add.html"><strong>Add Speech</strong></a>
+		      <a class="nav-item is-tab is-active" href="Update.html"><strong>Update Speech</strong></a>
+	      </a>
+	     </div>
+	  </div>
+	</nav><br>
+	<div>
+		<form type="post" action="/students">
+		 <div class="column is-3 is-offset-1">
+		  <label class="label">Title</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Speech title" name="title">
+		   </p>
+		  <label class="label">Speaker</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Name of speaker" name="speaker">
+		   </p>
+		  <label class="label">Date Delivered</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Date" name="date_delivered">
+		   </p>
+		  <label class="label">Location</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Location" name="locations">
+		   </p>
+		  <label class="label">Body</label>
+		    <p class="control">
+		      <textarea class="textarea" placeholder="" name="body"></textarea>
+		    </p>
+		  <label class="label">Permalink</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="www." name="permalink">
+		   </p>
+		  <label class="label">Date Created</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Creation date of entry" name="create_date">
+		   </p>
+		  <label class="label">Date Updated</label>
+		   <p class="control">
+		     <input class="input" type="text" placeholder="Update date of entry" name="update_date">
+		   </p>
+		  <div class="control is-grouped">
+		    <p class="control">
+		      <button class="button is-primary">Create</button>
+		    </p>
+		    <p class="control">
+		      <button class="button is-primary">Cancel</button>
+		    </p>
+		  </div>
+		 </div>
+		</form>
+	</div><br><br><br>
+
+	<footer class="footer">
+	  <div class="container">
+	    <div class="content has-text-centered">
+	      <p>
+	        <strong>Philippine President Speeches</strong> by Jayvee Asuncion and Sheila Siongco.</p>
+	        <p>The source code is licensed
+	        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+	        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+	      </p>
+	      <p>
+	        <span class="icon">
+	          <img src="github-256.png">
+	        </span>
+	      </p>
+	    </div>
+	  </div>
+	</footer>
+</body>

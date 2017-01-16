@@ -1,0 +1,182 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='../stylesheets/bulma.css')
+    title
+  body(style='background-attachment:fixed', background='../images/fbg.jpg')
+    nav.nav.has-shadow.is-black
+      .container
+        .nav-left
+          a.nav-item
+            img(src='../images/Team 3 Logo.jpg')
+            a.nav-item.is-tab(href='/')
+              strong Home
+            a.nav-item.is-tab(href='/view')
+              strong View Speech
+            a.nav-item.is-tab.is-active(href='/add')
+              strong Add Speech
+            a.nav-item.is-tab(href='/update')
+              strong Update Speech
+    br
+    div
+      form(type='post', action='/students')
+        .columns
+          .column.is-2
+            p
+              br
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/duterte.jpg')
+                span Duterte
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/naquino.jpg')
+                span B. Aquino
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/macapagal.jpg')
+                span Macapagal
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/estrada.jpg')
+                span Estrada
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/ramos.jpg')
+                span Ramos
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/caquino.jpg')
+                span Aquino
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/marcos.jpg')
+                span Marcos
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/diosdado.jpg')
+                span Diosdado
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/garcia.jpg')
+                span Garcia
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/magsaysay.jpg')
+                span Magsaysay
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/quirino.jpg')
+                span Quirino
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/roxas.jpg')
+                span Roxas
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/laurel.jpg')
+                span Laurel
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/osmena.jpg')
+                span Osmena
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/quezon.jpg')
+                span Quezon
+            p
+              a.button.is-large.black
+                span.icon.is-medium
+                  i
+                    img(src='../images/aguinaldo.jpg')
+                span Aguinaldo
+          .column.is-3.notification
+            form(method="POST", action="/save")
+              label.label.is-red Fill up this form to add new speech
+              br
+              label.label Title
+              p.control
+                input.input(type='text', placeholder='Speech title', name='title')
+              label.label Speaker
+              p.control
+                input.input(type='text', placeholder='Name of speaker', name='speaker', list='speakers')
+                datalist#speakers
+                  option Volvo
+                  option Saab
+                  option Mercedes
+                  option Audi
+              label.label Date Delivered
+              p.control
+                input.input(type='text', placeholder='Date', name='date_delivered')
+              label.label Location
+              p.control
+                input.input(type='text', placeholder='Location', name='locations')
+              label.label Body
+              p.control
+                textarea.textarea(placeholder='', name='body')
+              label.label Permalink
+              p.control
+                input.input(type='text', placeholder='www.', name='permalink')
+              label.label Date Created
+              p.control
+                input.input(type='text', placeholder='Creation date of entry', name='create_date')
+              label.label Date Updated
+              p.control
+                input.input(type='text', placeholder='Update date of entry', name='update_date')
+              br
+              br
+              br
+              br
+              .control.is-grouped
+                p.control
+                  button.button.is-primary Create
+                p.control
+                  button.button.is-primary Cancel
+    br
+    br
+    br
+    footer.footer
+      .container
+        .content.has-text-centered
+          p
+            strong Philippine President Speeches
+            |  by Jayvee Asuncion and Sheila Siongco.
+          p
+            | The source code is licensed
+            a(href='http://opensource.org/licenses/mit-license.php') MIT
+            | . The website content
+            |           is licensed 
+            a(href='http://creativecommons.org/licenses/by-nc-sa/4.0/') CC ANS 4.0
+            | .
+          p
+            span.icon
+              img(src='github-256.png')

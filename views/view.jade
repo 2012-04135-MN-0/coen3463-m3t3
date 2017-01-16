@@ -1,0 +1,71 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='../stylesheets/bulma.css')
+    title
+  body(style='background-attachment:fixed', background='../images/fbg.jpg')
+    nav.nav.has-shadow.is-black
+      .container
+        .nav-left
+          a.nav-item
+            img(src='../images/Team 3 Logo.jpg')
+            a.nav-item.is-tab(href='/')
+              strong Home
+            a.nav-item.is-tab.is-active(href='/view')
+              strong View Speech
+            a.nav-item.is-tab(href='/add')
+              strong Add Speech
+            a.nav-item.is-tab(href='/update')
+              strong Update Speech
+    br
+    div
+      form(type='post', action='/students')
+        .column.is-3.is-offset-1
+          h1.title.is-1
+            strong
+              | View by:
+              strong
+          label.label Title
+          p.control
+            span.select
+              select(name='title', placeholder='Dropdown Select')
+                option Select Dropdown
+                option
+                option
+                option
+                option
+          label.label Speaker
+          p.control
+            span.select
+              select(name='speaker')
+                option Select Dropdown
+                option
+                option
+                option
+                option
+          .control.is-grouped
+            p.control
+              button.button.is-primary View
+            p.control
+              button.button.is-primary Edit
+            p.control
+              button.button.is-primary Cancel
+    br
+    br
+    br
+    footer.footer
+      .container
+        .content.has-text-centered
+          p
+            strong Philippine President Speeches
+            |  by Jayvee Asuncion and Sheila Siongco.
+          p
+            | The source code is licensed
+            a(href='http://opensource.org/licenses/mit-license.php') MIT
+            | . The website content
+            |           is licensed 
+            a(href='http://creativecommons.org/licenses/by-nc-sa/4.0/') CC ANS 4.0
+            | .
+          p
+            span.icon
+              img(src='github-256.png')

@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='../stylesheets/bulma.css')
+    title
+  body(style='background-attachment:fixed', background='../images/backg.jpg')
+    nav.nav.has-shadow
+      .container
+        .nav-left
+          a.nav-item
+            img(src='../images/Team 3 Logo.jpg')
+            a.nav-item.is-tab.is-active.is-orange(href='/')
+              strong Home
+            a.nav-item.is-tab(href='/view')
+              strong View Speech
+            a.nav-item.is-tab(href='/add')
+              strong Add Speech
+            a.nav-item.is-tab(href='/update')
+              strong Update Speech
+    br
+    .column
+      .column.is-4.is-offset-1
+        p.title.is-1.is-black
+          strong
+            font(face='forte') Philippine President Speeches
+        br
+        br
+        p.title.is-4.is-white Explore for a wider knowledge in president speeches
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        p.center
+          a.button.white.is-medium.has-border(href='/view') View Speech
+          a.button.white.is-medium.has-border(href='/add') Add Speech
+          a.button.white.is-medium.has-border(href='/edit') Update Speech
+    br
+    br
+    br
+    footer.footer.orange
+      .container
+        .content.has-text-centered
+          p
+            strong Philippine President Speeches
+            |  by Jayvee Asuncion and Sheila Siongco.
+          p
+            | The source code is licensed
+            a(href='http://opensource.org/licenses/mit-license.php') MIT
+            | . The website content
+            | 	        is licensed 
+            a(href='http://creativecommons.org/licenses/by-nc-sa/4.0/') CC ANS 4.0
+            | .
+          p
+            span.icon
+              img(src='github-256.png')
