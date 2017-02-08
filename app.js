@@ -9,7 +9,6 @@ var fs = require('fs');
 
 var mongoose = require('mongoose');
 var url = 'mongodb://sheila1996:sheila1996@ds111559.mlab.com:11559/speech';
-const restify = require('express-restify-mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -106,15 +105,6 @@ app.get('/speech/:speechId', function(req, res) {
     }); 
   });
 
-app.post('/view/get', function(req, res){
-  res.render('view', usersArray);
-  user.findOne({speaker: req.body.speaker, title: req.body.title}, function(err, users){
-    console.log(users);
-    usersArray = users;
-  });
-  res.redirect('display_speech');
-});
-
 app.post('/speech/:speechId', function(req, res){
 
   var speechId = req.params.speechId;
@@ -142,7 +132,7 @@ app.post('/speech/:speechId', function(req, res){
   }); 
 });
 
-app.get('/speech/:speechId/update', function(req, res) {
+app.get('/speech/:speechId/delete', function(req, res) {
     var speechId = req.params.speechId;
     user.findOne({_id: speechId}, function(err, users){
       console.log(users)
@@ -153,6 +143,13 @@ app.get('/speech/:speechId/update', function(req, res) {
     }); 
   });
 
+app.get('/speech/:speechId/update', function(req, res) {
+    var speechId = req.params.speechId;
+    user.findOneAndRemove({_id: speechId}, function(req, res){
+    console.log('data deleted')
+  });
+  res.render('/speech')
+});
 
 // catch 404 and forward to error handler
   app.use(function(req, res, next) {
