@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='../../stylesheets/bulma.css')
+    title
+  body(style='background-attachment:fixed', background='../../images/fbg.jpg')
+    nav.nav.has-shadow.is-black
+      .container
+        .nav-left
+          a.nav-item
+            img(src='../../images/Team 3 Logo.jpg')
+            a.nav-item.is-tab(href='/')
+              strong Home
+            a.nav-item.is-tab.is-active(href='../view')
+              strong View Speech
+            a.nav-item.is-tab(href='../add')
+              strong Add Speech
+    br
+    br
+  div
+      form(method='post', action='/speech/' + user._id , onsubmit= 'return validateForm()')
+        .column.is-4.is-offset-1.notification
+          label.label.is-red Fill up this form to add new speech
+          br
+          label.label Title
+          p.control
+            input.input(type='text', placeholder='Speech title', name='title', value=user.title)
+          label.label Speaker
+          p.control
+            input.input(type='text', placeholder='Name of speaker', name='speaker', list='speakers', value=user.speaker)
+            datalist#speakers
+          label.label Date Delivered
+          p.control
+            input.input(type='text', placeholder='Date', name='date_delivered', value=user.date_delivered)
+          label.label Location
+          p.control
+            input.input(type='text', placeholder='Location', name='locations', value=user.locations)
+          label.label Body
+          p.control
+            textarea.textarea(placeholder='', name='body', value=user.body) #{user.body}
+          label.label Permalink
+          p.control
+            input.input(type='text', placeholder='www.', name='permalink', value=user.permalink)
+          label.label Date Created
+          p.control
+            input.input(type='text', placeholder='Creation date of entry', name='create_date', value=user.create_date)
+          label.label Date Updated
+          p.control
+            input.input(type='text', placeholder='Update date of entry', name='update_date', value=user.update_date)
+          br
+          br
+          .control.is-grouped
+            p.control
+              button.button.is-primary Create
+            p.control
+              button.button.is-primary Cancel
+    
+    footer.footer
+      .container
+        .content.has-text-centered
+          p
+            strong Philippine President Speeches
+            |  by Jayvee Asuncion and Sheila Siongco.
+          p
+            | The source code is licensed
+            a(href='http://opensource.org/licenses/mit-license.php') MIT
+            |             . The website content is licensed 
+            a(href='http://creativecommons.org/licenses/by-nc-sa/4.0/') CC ANS 4.0
+            | .
+          p
+            span.icon
+              img(src='../../images/github-256.png')

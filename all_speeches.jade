@@ -1,0 +1,25 @@
+extends view
+
+block content
+  h1.title.is-1
+    strong
+      | List of all the speeches in the database
+    strong
+  .column
+  .column.is-10.is-offset-1
+    table.table.is-bordered.is-striped.is-narrow
+      thead
+        tr
+          th Title
+          th Speaker
+          th Date Delivered
+          th Location
+          th Permalink
+        each user, i in users
+            tr
+              td
+                a.red-text(href= "/speech/" + user._id)= user.title
+              td= user.speaker
+              td= user.date_delivered
+              td= user.locations
+              td= user.permalink

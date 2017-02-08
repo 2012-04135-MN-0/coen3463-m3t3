@@ -1,0 +1,85 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='../stylesheets/bulma.css')
+    title
+  body(style='background-attachment:fixed', background='../images/backg.jpg')
+    nav.nav.has-shadow
+      .container
+        .nav-left
+          a.nav-item
+            img(src='../images/Team 3 Logo.jpg')
+            a.nav-item.is-tab.is-active.is-orange(href='/')
+              strong Home
+            a.nav-item.is-tab(href='/speech')
+              strong View Speeches
+            a.nav-item.is-tab(href='/add')
+              strong Add Speech
+        .nav-right.nav-menu
+          ul.navigation
+            li
+              a
+                strong Log in / Sign up
+              ul
+                .tile
+                  article.tile.is-child.notification
+                    form(method='post', action='/home/login')
+                      label.label Login
+                      p.control
+                        input.input(type='text', placeholder='Username', name='username')
+                        input.input(type='password', placeholder='Password', name='password')
+                      p.control
+                        center
+                          button.button.orange Login
+                    form(method='post', action='/home/signup')
+                      br
+                      label.label Sign Up
+                      p.control
+                        input.input(type='text', placeholder='Username', name='username')
+                        input.input(type='password', placeholder='Password', name='password')
+                        input.input(type='password', placeholder='Confirm Password', name='cpassword')
+                        input.input(type='text', placeholder='Firstname', name='firstname')
+                        input.input(type='text', placeholder='Lastname', name='lastname')
+                        input.input(type='text', placeholder='email', name='email')
+                        br
+                      p.control
+                        center
+                          button.button.orange Sign Up
+    br
+    .column
+      .column.is-4.is-offset-1
+        p.title.is-1.is-black
+          strong
+            font(face='forte') Philippine President Speeches
+        br
+        br
+        p.title.is-4.is-white Explore for a wider knowledge in president speeches
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        p.center
+          a.button.white.is-medium.has-border(href='/view') View Speech
+          a.button.white.is-medium.has-border(href='/add') Add Speech
+    br
+    br
+    br
+    footer.footer.orange
+      .container
+        .content.has-text-centered
+          p
+            strong Philippine President Speeches
+            |  by Jayvee Asuncion and Sheila Siongco.
+          p
+            | The source code is licensed
+            a(href='http://opensource.org/licenses/mit-license.php') MIT
+            | . The website content
+            |                       is licensed 
+            a(href='http://creativecommons.org/licenses/by-nc-sa/4.0/') CC ANS 4.0
+            | .
+          p
+            span.icon
+              img(src='../images/github-256.png')
