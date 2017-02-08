@@ -4,9 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var http = require('http');
+var fs = require('fs');
 
 var mongoose = require('mongoose');
 var url = 'mongodb://sheila1996:sheila1996@ds111559.mlab.com:11559/speech';
+const restify = require('express-restify-mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -34,6 +37,9 @@ mongoose.connection.once('open', function(res){
   console.log('connected');
 });
 
+app.get('/update', function(req,res){
+  res.render('update');
+});
 
   app.get('/add', function(req,res){
     res.render('add');
@@ -51,6 +57,7 @@ var schema = new mongoose.Schema({
 });
 
 var user = mongoose.model('speeches', schema);
+var usersArray = [];
 
 app.post('/new/add', function(req, res){
   new user({
@@ -72,34 +79,80 @@ app.post('/new/add', function(req, res){
   res.redirect('/add');
 });
 
-
-var usersArray = [];
-
 app.get('/view', function(req, res){
   res.render('view');
 });
 
-var speech = mongoose.model('speeches', schema);
 
-app.post('/view/find', function(req, res){
-  user.findOne({title: req.body.inputTitle}, function(err, usersArray){
-      console.log(usersArray);
+//List all the entries
+app.get('/speech', function(req, res) {
+  user.find(function(err, users) {
+    console.log('Speeches Loaded!');
+    res.render('all_speeches', {
+      title: 'All Entries',
+      users: users
     });
-  new speech({
-    title: usersArray['title'],
-  }).save(function(err, title){
-    if(err){
-      console.log(err);
-    } else {
-      console.log('data added');
-    }
   });
-  res.redirect('/view');
 });
 
-app.put('/viewspeech', function(req, res){
+app.get('/speech/:speechId', function(req, res) {
+    var speechId = req.params.speechId;
+    user.findOne({_id: speechId}, function(err, users){
+      console.log(users)
+      res.render('display_speech', {
+        title: user.title,
+        user: users
+      });
+    }); 
+  });
 
+app.post('/view/get', function(req, res){
+  res.render('view', usersArray);
+  user.findOne({speaker: req.body.speaker, title: req.body.title}, function(err, users){
+    console.log(users);
+    usersArray = users;
+  });
+  res.redirect('display_speech');
 });
+
+app.post('/speech/:speechId', function(req, res){
+
+  var speechId = req.params.speechId;
+  console.log(speechId);
+
+  var newData = {
+    title:req.body.title,
+    speaker:req.body.speaker,
+    date_delivered:req.body.date_delivered,
+    locations: req.body.locations,
+    body: req.body.body,
+    permalink: req.body.permalink,
+    create_date: req.body.create_date,
+    update_date: req.body.update_date
+  }
+  console.log(speechId);
+  user.update({_id: speechId}, {$set: newData}, function(err, result) {
+    if(err) {
+      console.log("Speech not updated!");
+    }
+    else {
+      console.log("Speech Updated!")
+      res.redirect('/speech/' + speechId)
+    }
+  }); 
+});
+
+app.get('/speech/:speechId/update', function(req, res) {
+    var speechId = req.params.speechId;
+    user.findOne({_id: speechId}, function(err, users){
+      console.log(users)
+      res.render('update', {
+        title: user.title,
+        user: users
+      });
+    }); 
+  });
+
 
 // catch 404 and forward to error handler
   app.use(function(req, res, next) {

@@ -223,6 +223,7 @@ table td,
 table th {
   text-align: left;
   vertical-align: top;
+  color: black;
 }
 
 table th {
@@ -2337,7 +2338,7 @@ a.box:active {
 
 .table {
   background-color: white;
-  color: #363636;
+  color: black;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -2403,7 +2404,7 @@ a.box:active {
 }
 
 .table th {
-  color: #363636;
+  color: black;
   text-align: left;
 }
 
@@ -2414,7 +2415,7 @@ a.box:active {
 .table thead td,
 .table thead th {
   border-width: 0 0 2px;
-  color: #7a7a7a;
+  color: black;
 }
 
 .table tbody tr:last-child td,
@@ -4784,6 +4785,10 @@ a.panel-block:hover {
   -ms-flex-negative: 1;
       flex-shrink: 1;
   padding: 10px;
+}
+
+.column.justify {
+  text-align: justify;
 }
 
 .columns.is-mobile > .column.is-narrow {
