@@ -224,7 +224,10 @@ table th {
   text-align: left;
   vertical-align: top;
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: black;
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 =======
 >>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 }
@@ -750,12 +753,15 @@ a.box:active {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .button.orange {
   color: white;
   border-width: 0;
   background-color: orange;
 }
 
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 =======
 >>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 .button.black {
@@ -2345,7 +2351,11 @@ a.box:active {
 .table {
   background-color: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: black;
+=======
+  color: #363636;
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 =======
   color: #363636;
 >>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
@@ -2415,7 +2425,11 @@ a.box:active {
 
 .table th {
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: black;
+=======
+  color: #363636;
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 =======
   color: #363636;
 >>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
@@ -2430,7 +2444,11 @@ a.box:active {
 .table thead th {
   border-width: 0 0 2px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: black;
+=======
+  color: #7a7a7a;
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 =======
   color: #7a7a7a;
 >>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
@@ -4223,6 +4241,7 @@ a.nav-item.is-tab.is-active {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4307,6 +4326,8 @@ a.navigation {
     background-color: orange;
 }
 
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 =======
 >>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 .nav {
@@ -4809,10 +4830,13 @@ a.panel-block:hover {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .column.justify {
   text-align: justify;
 }
 
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 =======
 >>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 .columns.is-mobile > .column.is-narrow {
