@@ -223,7 +223,10 @@ table td,
 table th {
   text-align: left;
   vertical-align: top;
+<<<<<<< HEAD
   color: black;
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 }
 
 table th {
@@ -746,12 +749,15 @@ a.box:active {
   color: white;
 }
 
+<<<<<<< HEAD
 .button.orange {
   color: white;
   border-width: 0;
   background-color: orange;
 }
 
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 .button.black {
   color: black;
 }
@@ -2338,7 +2344,11 @@ a.box:active {
 
 .table {
   background-color: white;
+<<<<<<< HEAD
   color: black;
+=======
+  color: #363636;
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
   margin-bottom: 20px;
   width: 100%;
 }
@@ -2404,7 +2414,11 @@ a.box:active {
 }
 
 .table th {
+<<<<<<< HEAD
   color: black;
+=======
+  color: #363636;
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
   text-align: left;
 }
 
@@ -2415,7 +2429,11 @@ a.box:active {
 .table thead td,
 .table thead th {
   border-width: 0 0 2px;
+<<<<<<< HEAD
   color: black;
+=======
+  color: #7a7a7a;
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 }
 
 .table tbody tr:last-child td,
@@ -4204,6 +4222,7 @@ a.nav-item.is-tab.is-active {
   }
 }
 
+<<<<<<< HEAD
 .navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4288,6 +4307,8 @@ a.navigation {
     background-color: orange;
 }
 
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 .nav {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -4787,10 +4808,13 @@ a.panel-block:hover {
   padding: 10px;
 }
 
+<<<<<<< HEAD
 .column.justify {
   text-align: justify;
 }
 
+=======
+>>>>>>> 33e758615a19d40cbd6b00f97dabc36e04f2767f
 .columns.is-mobile > .column.is-narrow {
   -webkit-box-flex: 0;
       -ms-flex: none;
