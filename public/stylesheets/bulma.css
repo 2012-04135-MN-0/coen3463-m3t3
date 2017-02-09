@@ -2568,6 +2568,10 @@ a.box:active {
   text-align: center;
 }
 
+.center.black {
+  color: black;
+}
+
 .title.is-black{
   color: black;
 }
