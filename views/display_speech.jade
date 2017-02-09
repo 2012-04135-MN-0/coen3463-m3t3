@@ -62,7 +62,6 @@ block content
       .control.is-grouped
         p.control
           a.button.is-primary(href= "/speech/" + user._id + "/update") Update
-        form(method='post', action='/speech/' + user._id + '/delete', onsubmit= 'return connfirmDelete()')
-          p.control
-            button.button.is-primary(href= "/speech/" + user._id + "/delete") Delete
+        p.control
+          a.button.is-primary(href= "/speech/" + user._id + "/delete") Delete
    

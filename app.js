@@ -132,7 +132,7 @@ app.post('/speech/:speechId', function(req, res){
   }); 
 });
 
-app.get('/speech/:speechId/delete', function(req, res) {
+app.get('/speech/:speechId/update', function(req, res) {
     var speechId = req.params.speechId;
     user.findOne({_id: speechId}, function(err, users){
       console.log(users)
@@ -143,12 +143,12 @@ app.get('/speech/:speechId/delete', function(req, res) {
     }); 
   });
 
-app.get('/speech/:speechId/update', function(req, res) {
+app.get('/speech/:speechId/delete', function(req, res) {
     var speechId = req.params.speechId;
     user.findOneAndRemove({_id: speechId}, function(req, res){
     console.log('data deleted')
   });
-  res.render('/speech')
+  res.redirect('/speech')
 });
 
 // catch 404 and forward to error handler
